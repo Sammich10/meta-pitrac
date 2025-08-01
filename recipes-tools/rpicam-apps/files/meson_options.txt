@@ -36,12 +36,12 @@ option('neon_flags',
 
 option('enable_hailo',
         type : 'feature',
-        value : 'enabled',
+        value : 'disabled',
         description : 'Enable Hailo postprocessing support')
 
 option('download_hailo_models',
         type : 'boolean',
-        value : true,
+        value : false,
         description : 'Download and install the Hailo postprocessing models')
 
 option('enable_imx500',

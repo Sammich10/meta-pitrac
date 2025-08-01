@@ -18,8 +18,16 @@ IMAGE_INSTALL:append = " \
                         python3-opencv \
                         python3-dev \
                         python3-setuptools \
+                        python3-numpy \
+                        python3-pickle \
+                        libstdc++ \
+                        libstdc++-dev \
+                        libatomic \
+                        libgcc \
                         opencv \
                         tmux \
+                        busybox \
+                        vim \
                         i2c-tools \
                         net-tools \
                         boost \
@@ -27,16 +35,34 @@ IMAGE_INSTALL:append = " \
                         swig \
                         lgpio \
                         libcamera \
-                        libcamera-apps \
                         rpicam-apps \
+                        sqlite3 \
                         "
 
 TOOLCHAIN_HOST_TASK:append = " \
-                            nativesdk-cmake \
+                            nativesdk-make \
                             nativesdk-ninja \
+                            nativesdk-cmake \
                             nativesdk-protobuf-c \
                             nativesdk-protobuf-compiler \
                             nativesdk-protobuf \
-                            nativesdk-python3-modules \
                             nativesdk-ccache \
+                            nativesdk-automake \
+                            nativesdk-autoconf \
+                            nativesdk-binutils \
+                            nativesdk-binutils-symlinks \
+                            nativesdk-cpp \
+                            nativesdk-cpp-symlinks \
+                            nativesdk-dos2unix \
+                            nativesdk-git \
+                            nativesdk-gcc \
+                            nativesdk-gcc-symlinks \
+                            nativesdk-g++ \
+                            nativesdk-g++-symlinks \
+                            nativesdk-libstdc++ \
+                            nativesdk-libstdc++-dev \
+                            nativesdk-libgcc \
+                            nativesdk-libatomic \
+                            nativesdk-pkgconfig \
+                            nativesdk-glibc-utils \
                             "
