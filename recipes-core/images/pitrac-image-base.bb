@@ -24,7 +24,20 @@ IMAGE_INSTALL:append = " \
                         libstdc++-dev \
                         libatomic \
                         libgcc \
+                        glibc \
+                        glibc-dev \
                         opencv \
+                        opencv-staticdev \
+                        ffmpeg \
+                        libavcodec \
+                        libavdevice \
+                        libavfilter \
+                        libavformat \
+                        libavresample \
+                        libavutil \
+                        libpostproc \
+                        libswresample \
+                        libswscale \
                         tmux \
                         busybox \
                         vim \
@@ -34,35 +47,43 @@ IMAGE_INSTALL:append = " \
                         samba \
                         swig \
                         lgpio \
+                        numcpp-dev \
                         libcamera \
+                        libcamera-dev \
                         rpicam-apps \
+                        rpicam-apps-dev \
                         sqlite3 \
+                        jsoncpp \
+                        zeromq \
+                        zeromq-dev \
+                        cppzmq-dev \
+                        msgpack-cpp-dev \
                         "
 
 TOOLCHAIN_HOST_TASK:append = " \
-                            nativesdk-make \
-                            nativesdk-ninja \
-                            nativesdk-cmake \
-                            nativesdk-protobuf-c \
-                            nativesdk-protobuf-compiler \
-                            nativesdk-protobuf \
-                            nativesdk-ccache \
-                            nativesdk-automake \
-                            nativesdk-autoconf \
-                            nativesdk-binutils \
-                            nativesdk-binutils-symlinks \
-                            nativesdk-cpp \
-                            nativesdk-cpp-symlinks \
-                            nativesdk-dos2unix \
-                            nativesdk-git \
-                            nativesdk-gcc \
-                            nativesdk-gcc-symlinks \
-                            nativesdk-g++ \
-                            nativesdk-g++-symlinks \
-                            nativesdk-libstdc++ \
-                            nativesdk-libstdc++-dev \
-                            nativesdk-libgcc \
-                            nativesdk-libatomic \
-                            nativesdk-pkgconfig \
-                            nativesdk-glibc-utils \
+                        nativesdk-make \
+                        nativesdk-ninja \
+                        nativesdk-cmake \
+                        nativesdk-protobuf-c \
+                        nativesdk-protobuf-compiler \
+                        nativesdk-protobuf \
+                        nativesdk-ccache \
+                        nativesdk-automake \
+                        nativesdk-autoconf \
+                        nativesdk-binutils \
+                        nativesdk-binutils-symlinks \
+                        nativesdk-cpp \
+                        nativesdk-cpp-symlinks \
+                        nativesdk-dos2unix \
+                        nativesdk-git \
+                        nativesdk-gcc \
+                        nativesdk-gcc-symlinks \
+                        nativesdk-g++ \
+                        nativesdk-g++-symlinks \
+                        nativesdk-libstdc++ \
+                        nativesdk-libstdc++-dev \
+                        nativesdk-libgcc \
+                        nativesdk-libatomic \
+                        nativesdk-pkgconfig \
+                        nativesdk-glibc-utils \
                             "
