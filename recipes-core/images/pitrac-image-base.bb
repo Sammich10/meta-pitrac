@@ -1,8 +1,16 @@
-require recipes-core/images/core-image-minimal.bb
+require recipes-core/images/core-image-base.bb
 
 SUMMARY = "Image for the PiTrac Raspberry Pi device"
 
 DESCRIPTION = "This image is designed for the PiTrac Raspberry Pi device, providing a minimal setup with essential tools and configurations to run the PiTrac software."
+
+# In your image recipe, add a post-install script
+ROOTFS_POSTPROCESS_COMMAND += "set_default_locale; "
+
+set_default_locale() {
+    echo 'LANG=en_US.UTF-8' >> ${IMAGE_ROOTFS}/etc/environment
+    echo 'LC_ALL=en_US.UTF-8' >> ${IMAGE_ROOTFS}/etc/environment
+}
 
 IMAGE_FEATURES:append = " \
                         allow-root-login \
@@ -42,14 +50,14 @@ IMAGE_INSTALL:append = " \
                         busybox \
                         vim \
                         i2c-tools \
+                        media-ctl \
+                        v4l-utils \
                         net-tools \
                         boost \
                         samba \
                         swig \
                         lgpio \
                         numcpp-dev \
-                        libcamera \
-                        libcamera-dev \
                         rpicam-apps \
                         rpicam-apps-dev \
                         sqlite3 \
@@ -58,6 +66,8 @@ IMAGE_INSTALL:append = " \
                         zeromq-dev \
                         cppzmq-dev \
                         msgpack-cpp-dev \
+                        glibc-utils \
+                        localedef \
                         "
 
 TOOLCHAIN_HOST_TASK:append = " \

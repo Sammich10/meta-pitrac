@@ -1,0 +1,3 @@
+include rpicam-apps.inc
+
+SRCREV = "025ca84648c9b9d74711477bf94b05bec349f53d"
