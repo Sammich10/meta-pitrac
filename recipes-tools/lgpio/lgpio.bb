@@ -28,8 +28,5 @@ EXTRA_OEMAKE = " \
         "
 
 do_install:append() {
-    rm -rf ${D}/usr/local/lib/python3.10/dist-packages/rgpio-0.2.2.0.egg-info
-    rm -rf ${D}/usr/local/lib/python3.10/dist-packages/__pycache__
+    rm -rf ${D}/opt
 }
-
-FILES:${PN} += "/usr/local/lib/python3.10/dist-packages"

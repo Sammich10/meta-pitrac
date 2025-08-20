@@ -36,7 +36,7 @@ IMAGE_INSTALL:append = " \
                         glibc-dev \
                         opencv \
                         opencv-staticdev \
-                        ffmpeg \
+                        rpidistro-ffmpeg \
                         libavcodec \
                         libavdevice \
                         libavfilter \
@@ -58,8 +58,12 @@ IMAGE_INSTALL:append = " \
                         swig \
                         lgpio \
                         numcpp-dev \
+                        libcamera \
+                        libcamera-dev \
                         rpicam-apps \
                         rpicam-apps-dev \
+                        raspi-gpio \
+                        raspi-utils \
                         sqlite3 \
                         jsoncpp \
                         zeromq \

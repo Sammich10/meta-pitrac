@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://license.txt;md5=a0013d1b383d72ba4bdc5b750e7d1d77"
 
 inherit meson pkgconfig
 
-DEPENDS = "libcamera cmake ffmpeg boost qtbase opencv"
-RDEPENDS:${PN} = "libcamera python3-core qtbase ffmpeg boost opencv"
+DEPENDS = "libcamera cmake rpidistro-ffmpeg boost qtbase opencv"
+RDEPENDS:${PN} = "libcamera python3-core qtbase rpidistro-ffmpeg boost opencv"
 
 S = "${WORKDIR}/git"
 B = "${S}/build"
@@ -24,5 +24,5 @@ do_install:append(){
     chrpath -d ${D}${libdir}/rpicam-apps-postproc/*.so.1.5.3
 }
 
-FILES:${PN} += "${bindir} ${libdir}/*.so.* ${libdir}/rpicam-apps-postproc/*.so.* /usr/share/*"
-FILES:${PN}-dev += "${includedir} ${libdir}/*.so ${libdir}/rpicam-apps-postproc/*.so"
+FILES:${PN} = "${bindir} ${libdir}/*.so.* ${libdir}/rpicam-apps-postproc/*.so.* /usr/share/*"
+FILES:${PN}-dev = "${includedir} ${libdir}/*.so ${libdir}/rpicam-apps-postproc/*.so"
