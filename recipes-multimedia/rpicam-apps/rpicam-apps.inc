@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://license.txt;md5=a0013d1b383d72ba4bdc5b750e7d1d77"
 
 inherit meson pkgconfig
 
-DEPENDS = "libcamera cmake rpidistro-ffmpeg boost qtbase opencv"
-RDEPENDS:${PN} = "libcamera python3-core qtbase rpidistro-ffmpeg boost opencv"
+DEPENDS = "libcamera-rpi cmake rpidistro-ffmpeg boost qtbase opencv"
+RDEPENDS:${PN} = "libcamera-rpi python3-core qtbase rpidistro-ffmpeg boost opencv"
 
 S = "${WORKDIR}/git"
 B = "${S}/build"

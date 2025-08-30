@@ -58,8 +58,10 @@ IMAGE_INSTALL:append = " \
                         swig \
                         lgpio \
                         numcpp-dev \
-                        libcamera \
-                        libcamera-dev \
+                        libcamera-rpi \
+                        libcamera-rpi-dev \
+                        libpisp \
+                        libpisp-dev \
                         rpicam-apps \
                         rpicam-apps-dev \
                         raspi-gpio \
