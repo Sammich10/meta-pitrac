@@ -40,6 +40,7 @@ DEPENDS = " \
     meson \
     glibc \
     gstreamer1.0-plugins-base \
+    gstreamer1.0-libav \
     "
 
 inherit meson pkgconfig python3native

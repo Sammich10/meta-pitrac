@@ -65,6 +65,7 @@ IMAGE_INSTALL:append = " \
                         rpicam-apps \
                         rpicam-apps-dev \
                         raspi-gpio \
+                        mjpg-streamer \
                         raspi-utils \
                         sqlite3 \
                         jsoncpp \
