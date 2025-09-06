@@ -75,6 +75,8 @@ IMAGE_INSTALL:append = " \
                         msgpack-cpp-dev \
                         glibc-utils \
                         localedef \
+                        googletest \
+                        googletest-dev \
                         "
 
 TOOLCHAIN_HOST_TASK:append = " \
